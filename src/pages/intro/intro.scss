@@ -1,0 +1,24 @@
+page-intro {
+    .slide-image img {
+        width: 65%;
+    }
+
+    p.slide-description {
+        color: gray;
+        animation-name: text;
+        animation-duration: 3s;
+    }
+
+    a.skip{
+        position: absolute;
+        top: 5px;
+        right: 5px;
+    }
+}
+
+@keyframes text {
+    0%   { width:1000%; }
+    25%  { width:500%;  }
+    50%  { width:250%;  }
+    100% { width:100%;  }
+  }

@@ -15,26 +15,28 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 })
 export class FeedPage {
 
-  public nomeUsuario:string = "Everton Gonçalves";
-  public dataPostagem:string = "10 de Dezembro, 2018";
-  public conteudoPostagem:string = "Criando meu primeiro app híbrido com Ionic!";
-  public qtdLikes:number = 10;
-  public qtdComentarios:number = 5;
-  public horaAtual:number = 21;
-  public horaPostagem:number = 14;
-  public horasPassadas:number = 0;
-  public uriImagemPerfil:string = "../../assets/imgs/evertonImgPerfil.jpeg"
+  public objFeed = {
+    nomeUsuario:"Everton Gonçalves",
+    dataPostagem:"10 de Dezembro, 2018",
+    conteudoPostagem:"Criando meu primeiro app híbrido com Ionic!",
+    qtdLikes: 10,
+    qtdComentarios: 5,
+    horaAtual: 21,
+    horaPostagem: 14,
+    horasPassadas: 0,
+    uriImagemPerfil:"../../assets/imgs/evertonImgPerfil.jpeg"
+  }
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
   }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad FeedPage');
-    this.horasPassadas = this.calcularHoraPostagem();
+    this.objFeed.horasPassadas = this.calcularHoraPostagem();
   }
 
   public calcularHoraPostagem():number{
-    return this.horaAtual - this.horaPostagem;
+    return this.objFeed.horaAtual - this.objFeed.horaPostagem;
   }
 
 }

@@ -19,32 +19,32 @@
       <ion-avatar item-start>
         <img src="../../assets/imgs/evertonImgPerfil.jpeg">
       </ion-avatar>
-      <h2 class="nomeUsuario">{{ nomeUsuario }}</h2>
-      <p class="dataPostagem">{{ dataPostagem }}</p>
+      <h2 class="nomeUsuario">{{ objFeed.nomeUsuario }}</h2>
+      <p class="dataPostagem">{{ objFeed.dataPostagem }}</p>
     </ion-item>
 
     <img src="../../assets/imgs/logo.png">
 
     <ion-card-content>
-      <p>{{ conteudoPostagem }}</p>
+      <p>{{ objFeed.conteudoPostagem }}</p>
     </ion-card-content>
 
     <ion-row>
       <ion-col>
         <button ion-button icon-start clear small>
           <ion-icon name="thumbs-up"></ion-icon>
-          <div>{{ qtdLikes }} Likes</div>
+          <div>{{ objFeed.qtdLikes }} Likes</div>
         </button>
       </ion-col>
       <ion-col>
         <button ion-button icon-start clear small>
           <ion-icon name="text"></ion-icon>
-          <div>{{ qtdComentarios }} Comentários</div>
+          <div>{{ objFeed.qtdComentarios }} Comentários</div>
         </button>
       </ion-col>
       <ion-col center text-center>
         <ion-note>
-          {{ horasPassadas }}h ago
+          {{ objFeed.horasPassadas }}h ago
         </ion-note>
       </ion-col>
     </ion-row>
